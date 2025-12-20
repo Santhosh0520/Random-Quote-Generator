@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background 0.6s ease;
+}
+
+.app {
+  width: 90%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.header p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+select, button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+select {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+button {
+  background: linear-gradient(135deg, #8e2de2, #4a00e0);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 10px 20px rgba(138,43,226,0.5);
+}
+
+.quote-card {
+  background: rgba(0,0,0,0.35);
+  border-radius: 18px;
+  padding: 18px;
+  min-height: 150px;
+  animation: fadeSlide 0.6s ease;
+}
+
+.quote-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.quote-author {
+  margin-top: 12px;
+  text-align: right;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.quote-source {
+  text-align: right;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   ANIMATED BACKGROUND
+================================ */
+body {
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===============================
+   FAVOURITES PANEL
+================================ */
+.favourites-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(18px);
+  color: white;
+  transition: right 0.4s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.favourites-panel.active {
+  right: 0;
+}
+
+.fav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.fav-header button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.fav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fav-item {
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+}
+
+.fav-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.fav-item span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.remove-fav {
+  margin-top: 8px;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== FIX DROPDOWN OPTION VISIBILITY ===== */
+select option {
+  background-color: #1e1e1e;   /* dark background */
+  color: #ffffff;              /* visible white text */
+}
+
+/* Optional: highlight selected/hovered option */
+select option:hover,
+select option:checked {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
