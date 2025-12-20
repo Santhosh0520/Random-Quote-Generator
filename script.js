@@ -23,10 +23,10 @@ const closeFavBtn = document.getElementById("closeFavBtn");
 const categoryMap = {
   motivational: "motivation",
   success: "success",
-  life: "life",
+  life: "philosophy",
   love: "love",
-  career: "success",   // closest category
-  depression: "wisdom" // or "motivation" if you prefer
+  career: "profession",   // closest category
+  depression: "sadness" // or "motivation" if you prefer
 };
 
 // ===============================
@@ -180,3 +180,4 @@ downloadBtn.onclick = () => {
 // ===============================
 newQuoteBtn.onclick = getQuote;
 getQuote();
+
