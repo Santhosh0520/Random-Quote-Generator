@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quote Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="app">
+
+    <header class="header">
+      <h1>Random Quotes Generator</h1>
+      <p>Words that Match your Mood</p>
+    </header>
+
+    <section class="controls">
+      <select id="category">
+        <option value="motivational">Motivational</option>
+        <option value="success">Success</option>
+        <option value="life">Life</option>
+        <option value="love">Love</option>
+        <option value="career">Career</option>
+        <option value="depression">Depression</option>
+      </select>
+
+      <button id="newQuoteBtn">New Quote</button>
+    </section>
+
+    <section class="quote-card">
+        <img id="quoteBgImage" class="quote-bg-image" alt="">
+      <p class="quote-text" id="quoteText">Click “New Quote” to begin</p>
+      <p class="quote-author" id="quoteAuthor"></p>
+      <p class="quote-source" id="quoteSource"></p>
+    </section>
+
+    <section class="actions">
+      <button id="copyBtn">Copy</button>
+      <button id="favBtn">♡</button>
+      <button id="whatsappBtn">WhatsApp</button>
+      <button id="showFavBtn">Favourites</button>
+      <button id="downloadBtn">Download</button>
+    </section>
+
+  </main>
+
+  <!-- FAVOURITES PANEL -->
+  <aside class="favourites-panel" id="favouritesPanel">
+    <div class="fav-header">
+      <h2>Your Favourites</h2>
+      <button id="closeFavBtn">✕</button>
+    </div>
+    <div class="fav-list" id="favList"></div>
+  </aside>
+
+  <canvas id="posterCanvas" hidden></canvas>
+  <script src="script.js" defer></script>
+</body>
+</html>
